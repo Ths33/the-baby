@@ -1,0 +1,28 @@
+{
+  "name": "the-baby",
+  "main": "./dist/_worker.js/index.js",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./dist"
+  },
+  "vars": {
+    "PUBLIC_SITE_URL": "http://localhost:4321"
+  },
+  "r2_buckets": [
+    {
+      "binding": "REACTIONS",
+      "bucket_name": "the-baby-reactions"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "the-baby",
+      "database_id": "REPLACE_WITH_D1_DATABASE_ID"
+    }
+  ]
+}
