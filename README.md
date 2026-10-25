@@ -2,6 +2,15 @@
 
 Uma revelação cinematográfica do bebê para a família, projetada para celular e compartilhamento por WhatsApp.
 
+## Provisionamento realizado em 24/10/2026
+
+- Worker **the-baby** conectado ao repositório GitHub `Ths33/the-baby` (branch `main`).
+- Build command configurado no Cloudflare Builds: `npm run build`.
+- Banco D1 **the-baby** criado; tabela `reactions` criada.
+- Bucket R2 privado **the-baby-reactions** criado.
+- `wrangler.jsonc` vincula o D1 e o R2 pelo identificador correto.
+- **Pendente:** confirmar execução e sucesso do build/deploy; nenhuma execução foi listada pela API no momento da configuração. É necessário definir `REVEAL_GENDER` e `ADMIN_TOKEN` como segredos de execução no Worker antes de liberar a revelação real. Não publique o link aos familiares antes de testar câmera, gravação e upload no Safari iOS e Chrome Android.
+
 ## Recursos
 - Céu estrelado animado, estrela ascendente e revelação azul/rosa
 - Câmera frontal e microfone com consentimento explícito
