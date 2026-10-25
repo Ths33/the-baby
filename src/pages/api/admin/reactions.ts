@@ -1,0 +1,3 @@
+import type { APIRoute } from 'astro';
+export const prerender = false;
+export const GET: APIRoute = async ({request,locals})=>{const env=locals.runtime?.env;if(!env?.ADMIN_TOKEN||request.headers.get('Authorization')!== 'Bearer '+env.ADMIN_TOKEN)return new Response('Unauthorized',{status:401});if(!env.DB)return new Response('DB unavailable',{status:503});const data=await env.DB.prepare('SELECT id,name,guess,created_at FROM reactions ORDER BY created_at DESC LIMIT 300').all();return new Response(JSON.stringify({reactions:data.results}),{headers:{'Content-Type':'application/json','Cache-Control':'no-store'}})};
