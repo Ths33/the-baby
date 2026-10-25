@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS reactions (id TEXT PRIMARY KEY, name TEXT NOT NULL, guess TEXT NOT NULL, object_key TEXT NOT NULL, content_type TEXT NOT NULL, created_at TEXT NOT NULL);
