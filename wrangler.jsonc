@@ -10,7 +10,8 @@
     "directory": "./dist"
   },
   "vars": {
-    "PUBLIC_SITE_URL": "http://localhost:4321"
+    "REVEAL_GENDER": "boy",
+    "PUBLIC_SITE_URL": "https://the-baby.workers.dev"
   },
   "r2_buckets": [
     {
